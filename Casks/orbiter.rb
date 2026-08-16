@@ -14,8 +14,8 @@
 #
 
 cask "orbiter" do
-  version "0.1.0"
-  sha256 "8a6058c7fe339f8f2e29055277b1e9afa911a2c1e623ac2402b40eeea2e45bfb"
+  version "0.1.1"
+  sha256 "8d9c3322b76bc4159f6f644e8fd54999d5de32cf0fd0dd689c85d32b3dd3735e"
 
   url "https://github.com/djb-rh/orbiter/releases/download/v#{version}/Orbiter-#{version}.dmg",
       verified: "github.com/djb-rh/orbiter/"
@@ -35,22 +35,6 @@ cask "orbiter" do
   depends_on cask: "openscad@snapshot"
 
   app "Orbiter.app"
-
-  # v0.1.0 is signed ad-hoc, not with a Developer ID, so macOS quarantines it
-  # on download. Until releases are notarized, first launch needs one of:
-  #
-  #   xattr -dr com.apple.quarantine /Applications/Orbiter.app
-  #
-  # or right-click the app and choose Open. Saying so here beats letting people
-  # discover it as a mysterious "damaged app" dialog.
-  caveats <<~EOS
-    Orbiter #{version} is not yet notarized. On first launch macOS will refuse
-    to open it. Either right-click Orbiter and choose Open, or run:
-
-      xattr -dr com.apple.quarantine /Applications/Orbiter.app
-
-    Orbiter also needs OpenSCAD, which this cask installs for you.
-  EOS
 
   zap trash: [
     "~/Library/Application Support/Orbiter",

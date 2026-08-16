@@ -9,12 +9,7 @@ brew trust djb-rh/orbiter        # Homebrew requires this for third-party taps
 brew install --cask orbiter
 ```
 
-Orbiter 0.1.0 is not yet notarized, so macOS refuses to open it on first
-launch. Right-click Orbiter and choose Open, or run:
-
-```bash
-xattr -dr com.apple.quarantine /Applications/Orbiter.app
-```
+Signed and notarized, so it opens without any Gatekeeper detour.
 
 The cask installs OpenSCAD as a dependency, since Orbiter runs it to turn a
 `.scad` into a mesh.
