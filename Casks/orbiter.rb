@@ -23,7 +23,7 @@ cask "orbiter" do
   desc "Records seamlessly looping turntable videos and GIFs of OpenSCAD models"
   homepage "https://github.com/djb-rh/orbiter"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   # Orbiter shells out to the openscad binary; it does not bundle or link it.
   #
