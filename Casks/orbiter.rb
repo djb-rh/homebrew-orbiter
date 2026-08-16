@@ -36,6 +36,14 @@ cask "orbiter" do
 
   app "Orbiter.app"
 
+  # Notarized, so the first-launch dialog is the benign one with an Open
+  # button rather than a block. It cannot be suppressed for a cask, and it is
+  # shown once, so this note exists to set the expectation rather than to warn.
+  caveats <<~EOS
+    The first time you open Orbiter, macOS will ask to confirm because it was
+    downloaded from the internet. Click Open. It only asks once.
+  EOS
+
   zap trash: [
     "~/Library/Application Support/Orbiter",
     "~/Library/Caches/com.orbiter.app",

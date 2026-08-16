@@ -9,7 +9,9 @@ brew trust djb-rh/orbiter        # Homebrew requires this for third-party taps
 brew install --cask orbiter
 ```
 
-Signed and notarized, so it opens without any Gatekeeper detour.
+Signed and notarized. macOS still asks once, the first time you open it —
+a one-time confirmation with an **Open** button, which is what notarization
+buys you in place of an outright block.
 
 The cask installs OpenSCAD as a dependency, since Orbiter runs it to turn a
 `.scad` into a mesh.
