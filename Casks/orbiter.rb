@@ -14,8 +14,8 @@
 #
 
 cask "orbiter" do
-  version "0.1.1"
-  sha256 "8d9c3322b76bc4159f6f644e8fd54999d5de32cf0fd0dd689c85d32b3dd3735e"
+  version "0.1.2"
+  sha256 "f52ca25ee72c58c565510a6ac426ae5c8d44e307c849e733456b94166c279c25"
 
   url "https://github.com/djb-rh/orbiter/releases/download/v#{version}/Orbiter-#{version}.dmg",
       verified: "github.com/djb-rh/orbiter/"
